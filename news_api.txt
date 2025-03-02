@@ -8,7 +8,7 @@ while True:
     # user2 = input("Your Country: ")
     url = (f"https://newsapi.org/v2/everything?"
            f"q={user}&"
-           f"apiKey=caac38bb30684bb2ac1607af4e36569e")
+           f"apiKey=Enter your API key")  #Enter your API key
 
     r = requests.get(url)
     news = json.loads(r.text)
