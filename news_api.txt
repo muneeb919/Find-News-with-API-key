@@ -1,0 +1,18 @@
+from http.client import responses
+
+import requests
+import json
+
+while True:
+    user = input("Which news you interested: ")
+    # user2 = input("Your Country: ")
+    url = (f"https://newsapi.org/v2/everything?"
+           f"q={user}&"
+           f"apiKey=caac38bb30684bb2ac1607af4e36569e")
+
+    r = requests.get(url)
+    news = json.loads(r.text)
+    print(news)
+    for article in news["articles"]:
+        print(article["description"])
+
